@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 [{ "title": "Ruby on Railsを使って新しウェブページを作る", "description": "Ruby on Railsを使って新しウェブページを作る方法について説明します。","url": "https://dev-yakuza.github.io/ruby-on-rails/create-page/","date": "2020-03-08T13:40:57+09:00", "page": "1" },{ "title": "Railsで作ったプロジェクトのフォルダ構造", "description": "Ruby on Railsで生成したプロジェクトのフォルダの構造を確認してみましょう。","url": "https://dev-yakuza.github.io/ruby-on-rails/folder-structure/","date": "2020-03-08T13:40:57+09:00", "page": "1" },{ "title": "MacでRuby on Railsを始める", "description": "MacにRuby on Railsをインストールして、新いプロジェクトを始める方法について説明します。","url": "https://dev-yakuza.github.io/ruby-on-rails/rails-on-mac/","date": "2020-03-06T18:24:05+09:00", "page": "1" }]
-=======
-[{ "title": "MacでRuby on Railsを始める", "description": "MacにRuby on Railsをインストールして、新いプロジェクトを始める方法について説明します。","url": "https://dev-yakuza.github.io/ruby-on-rails/rails-on-mac/","date": "2020-02-26T12:48:18+09:00", "page": "1" }]
->>>>>>> b867852661177026b68f881ec1d4517bab5ac382
