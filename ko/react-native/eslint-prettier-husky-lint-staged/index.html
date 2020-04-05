@@ -212,7 +212,7 @@ Successfully created .eslintrc.js file in /Users/jeonghean_kim/projects/poma_app
   </span><span class="err">...</span><span class="w">
   </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="err">...</span><span class="w">
-    </span><span class="nl">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eslint ./src/**/*.tsx ./src/**/*.ts"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eslint --ext .tsx --ext .ts src/"</span><span class="p">,</span><span class="w">
     </span><span class="err">...</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="err">...</span><span class="w">
@@ -310,7 +310,7 @@ All matched files use Prettier code style!
   </span><span class="err">...</span><span class="w">
   </span><span class="nl">"lint-staged"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"src/**/*.{ts,tsx}"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"eslint ./src/**/*.tsx ./src/**/*.ts --fix"</span><span class="w">
+      </span><span class="s2">"eslint --ext .tsx --ext .ts src/ --fix"</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="s2">"prettier --write ."</span><span class="w">
