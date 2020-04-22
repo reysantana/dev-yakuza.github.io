@@ -1,1 +1,1 @@
-$(document).ready(function(){$("img").click(function(){var n=$(this).attr("src");window.open(n,"_blank")})});
+$(document).ready(function(){$("img").click(function(){$(this).css("cursor","pointer");var n=$(this).attr("src");window.open(n,"_blank")})});
