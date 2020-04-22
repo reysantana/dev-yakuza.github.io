@@ -178,7 +178,17 @@ cd</span> ..
 <span class="p">}</span>
 
 <span class="kd">@end</span>
-</code></pre></div></div> <h3 id="js">JS</h3> <p>上で設定したSplashスクリーンを終了させるため下記のようにソースを追加します。</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+</code></pre></div></div> <h3 id="js">JS</h3> <p>上で設定したSplashスクリーンを終了させるため下記のようにソースを追加します。</p> <ul> <li>Functional Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">SplashScreen</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native-splash-screen</span><span class="dl">'</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="nx">WelcomePage</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div> <ul> <li>Class Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="k">import</span> <span class="nx">SplashScreen</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native-splash-screen</span><span class="dl">'</span>
 <span class="p">...</span>
 <span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">WelcomePage</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
@@ -188,7 +198,12 @@ cd</span> ..
       <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div> <p>上のソースを見たら分かりますが<code class="language-plaintext highlighter-rouge">SplashScreen.hide();</code>を使って好きな時Splashスクリーンを終了させることができます。</p> <div class="in-feed-ads"> <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7987914246691031" data-ad-slot="2718813593"></ins> <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div> <h2 id="完了">完了</h2> <p>リアクトネイティブ(React Native)でプロジェクトを進める時Splashスクリーンがいつも早くなくなって困りました。<code class="language-plaintext highlighter-rouge">react-native-splash-screen</code>ライブラリを使った後、Splashスクリーンを自由にコントロールすることが出来てもっと良いUXを作ることができました。</p> <p>私の場合、ネットワークを使ってないアプリは下記のように強制的に時間を入れてSplashスクリーンをもうちょっと維持しています。</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div> <p>上のソースを見たら分かりますが<code class="language-plaintext highlighter-rouge">SplashScreen.hide();</code>を使って好きな時Splashスクリーンを終了させることができます。</p> <div class="in-feed-ads"> <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7987914246691031" data-ad-slot="2718813593"></ins> <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div> <h2 id="完了">完了</h2> <p>リアクトネイティブ(React Native)でプロジェクトを進める時Splashスクリーンがいつも早くなくなって困りました。<code class="language-plaintext highlighter-rouge">react-native-splash-screen</code>ライブラリを使った後、Splashスクリーンを自由にコントロールすることが出来てもっと良いUXを作ることができました。</p> <p>私の場合、ネットワークを使ってないアプリは下記のように強制的に時間を入れてSplashスクリーンをもうちょっと維持しています。</p> <ul> <li>Functional Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">},</span> <span class="p">[])</span>
+</code></pre></div></div> <ul> <li>Class Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
   <span class="p">...</span>
   <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>

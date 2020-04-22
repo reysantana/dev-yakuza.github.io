@@ -178,7 +178,17 @@ cd</span> ..
 <span class="p">}</span>
 
 <span class="kd">@end</span>
-</code></pre></div></div> <h3 id="js">JS</h3> <p>add the source code below to end Splash screen we set above.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+</code></pre></div></div> <h3 id="js">JS</h3> <p>add the source code below to end Splash screen we set above.</p> <ul> <li>Functional Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">SplashScreen</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native-splash-screen</span><span class="dl">'</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="nx">WelcomePage</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div> <ul> <li>Class Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="k">import</span> <span class="nx">SplashScreen</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native-splash-screen</span><span class="dl">'</span>
 <span class="p">...</span>
 <span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">WelcomePage</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
@@ -188,7 +198,12 @@ cd</span> ..
       <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div> <p>I think you already understand what to do. add <code class="language-plaintext highlighter-rouge">SplashScreen.hide();</code> when you want to end Spalsh screen.</p> <div class="in-feed-ads"> <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7987914246691031" data-ad-slot="2718813593"></ins> <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div> <h2 id="completed">Completed</h2> <p>I had always the problem that Splash screen ended fastly. after I used <code class="language-plaintext highlighter-rouge">react-native-splash-screen</code> library, I can control Splash screen to make good UX.</p> <p>in my case, if my app doesn’t use the network, I add the code below to keep the Splash screen for a while.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div> <p>I think you already understand what to do. add <code class="language-plaintext highlighter-rouge">SplashScreen.hide();</code> when you want to end Spalsh screen.</p> <div class="in-feed-ads"> <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7987914246691031" data-ad-slot="2718813593"></ins> <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div> <h2 id="completed">Completed</h2> <p>I had always the problem that Splash screen ended fastly. after I used <code class="language-plaintext highlighter-rouge">react-native-splash-screen</code> library, I can control Splash screen to make good UX.</p> <p>in my case, if my app doesn’t use the network, I add the code below to keep the Splash screen for a while.</p> <ul> <li>Functional Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">},</span> <span class="p">[])</span>
+</code></pre></div></div> <ul> <li>Class Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
   <span class="p">...</span>
   <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>

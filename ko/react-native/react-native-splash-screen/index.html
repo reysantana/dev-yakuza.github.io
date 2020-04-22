@@ -178,7 +178,17 @@ cd</span> ..
 <span class="p">}</span>
 
 <span class="kd">@end</span>
-</code></pre></div></div> <h3 id="js">JS</h3> <p>위에서 설정한 Splash 스크린을 종료시키기 위해 아래와 같이 소스를 추가합니다.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+</code></pre></div></div> <h3 id="js">JS</h3> <p>위에서 설정한 Splash 스크린을 종료시키기 위해 아래와 같이 소스를 추가합니다.</p> <ul> <li>Functional Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">SplashScreen</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native-splash-screen</span><span class="dl">'</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="nx">WelcomePage</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div> <ul> <li>Class Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="k">import</span> <span class="nx">SplashScreen</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native-splash-screen</span><span class="dl">'</span>
 <span class="p">...</span>
 <span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">WelcomePage</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
@@ -188,7 +198,12 @@ cd</span> ..
       <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div> <p>위에서도 알 수 있듯이 <code class="language-plaintext highlighter-rouge">SplashScreen.hide();</code>를 사용하면 원하는 시점에 Splash 스크린을 종료시킬 수 있습니다.</p> <div class="in-feed-ads"> <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7987914246691031" data-ad-slot="2718813593"></ins> <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div> <h2 id="완료">완료</h2> <p>RN(React Native)로 프로젝트를 진행할 때 Splash 스크린이 항상 빨리 없어져서 문제가 되었습니다. <code class="language-plaintext highlighter-rouge">react-native-splash-screen</code> 라이브러리를 사용한 후, Splash 스크린을 자유롭게 조절할 수 있어 좀 더 좋은 사용자 경험을 줄 수 있게 되었습니다.</p> <p>저는 네트워크를 사용하지 않는 앱인 경우 아래와 같이 강제적으로 시간을 주어서 좀 더 Splash 스크린을 유지하고 있습니다.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div> <p>위에서도 알 수 있듯이 <code class="language-plaintext highlighter-rouge">SplashScreen.hide();</code>를 사용하면 원하는 시점에 Splash 스크린을 종료시킬 수 있습니다.</p> <div class="in-feed-ads"> <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7987914246691031" data-ad-slot="2718813593"></ins> <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> </div> <h2 id="완료">완료</h2> <p>RN(React Native)로 프로젝트를 진행할 때 Splash 스크린이 항상 빨리 없어져서 문제가 되었습니다. <code class="language-plaintext highlighter-rouge">react-native-splash-screen</code> 라이브러리를 사용한 후, Splash 스크린을 자유롭게 조절할 수 있어 좀 더 좋은 사용자 경험을 줄 수 있게 되었습니다.</p> <p>저는 네트워크를 사용하지 않는 앱인 경우 아래와 같이 강제적으로 시간을 주어서 좀 더 Splash 스크린을 유지하고 있습니다.</p> <ul> <li>Functional Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">},</span> <span class="p">[])</span>
+</code></pre></div></div> <ul> <li>Class Component</li> </ul> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
   <span class="p">...</span>
   <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">SplashScreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
