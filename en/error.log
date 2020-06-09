@@ -1,0 +1,30 @@
+2020-06-09T07:47:07.222851+00:00 app[clock.1]: [5/5]: DongGyun Lee(210)
+2020-06-09T07:47:08.347082+00:00 app[clock.1]: atom10
+2020-06-09T07:47:10.696914+00:00 app[clock.1]: IO Error: "https://docs.aws.amazon.com/xray/latest/devguide/images/architecture-dataflow.png"
+2020-06-09T07:47:11.374139+00:00 app[clock.1]: IO Error: "https://docs.aws.amazon.com/ko_kr/xray/latest/devguide/images/scorekeep-gettingstarted-servicemap-after-github.png"
+2020-06-09T07:47:18.572495+00:00 app[clock.1]: Summary does not exist
+2020-06-09T07:47:19.661811+00:00 app[clock.1]: ERROR 2: 'NoneType' object is not subscriptable
+
+
+2020-06-09T08:43:13.033507+00:00 app[clock.1]: [5/5]: leeyh0216(233)
+2020-06-09T08:43:13.792676+00:00 app[clock.1]: atom10
+2020-06-09T08:43:14.432684+00:00 app[clock.1]: ERROR 2: encoding with 'idna' codec failed (UnicodeError: label empty or too long)
+2020-06-09T08:43:14.608558+00:00 app[clock.1]: ERROR 2: encoding with 'idna' codec failed (UnicodeError: label empty or too long)
+2020-06-09T08:43:14.773432+00:00 app[clock.1]: ERROR 2: encoding with 'idna' codec failed (UnicodeError: label empty or too long)
+2020-06-09T08:43:15.627098+00:00 app[clock.1]: ERROR 2: encoding with 'idna' codec failed (UnicodeError: label empty or too long)
+
+2020-06-09T10:20:56.237742+00:00 app[clock.1]: --- CRAWLING: 20.37 seconds ---
+2020-06-09T10:20:56.237787+00:00 app[clock.1]: [5/5]: Plactic Code(32)
+2020-06-09T10:20:57.151593+00:00 app[clock.1]: rss20
+2020-06-09T10:20:57.345483+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:57.518671+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:57.699361+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:57.891654+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:58.124016+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:58.288286+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:58.476648+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:58.696310+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:58.879315+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:59.084287+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:59.272554+00:00 app[clock.1]: ERROR 3: object has no attribute 'updated'
+2020-06-09T10:20:59.802575+00:00 app[clock.1]: IO Error: https://floydkim.netlify.comdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAAsSAAALEgHS3X78AAAEKUlEQVQ4y5WVa0ybVRjH+82omTG6T+KWjbhlfjDLosNEE51z+mFxTJ1zuIuGabzMRTMyNeqSZSwu2SLKLgYXyHSKRGCbDNgojItCNq5tgVFKKdcChbV92/KWS4HCz+eUsqBxwj6cnPd9z3n+z/95zvn/X4Ov38Fih9bXHhnq2SNzQOax/g6G+uy31w2LAopungtyy1BAQRn7W/8iw1HP5EBnJInhblh5ZVZBMwNdmHpaeKqxCENtNj866pgSQPdCgHNAaqjNwzJPS+DJ9hrua7jEAVslzzUZ+V7ewwsxnF/iLRmqJJf0auvNUpaa8sjpMIGrmw3NxXwngNPC+p8MVWnR2Tev8QoQ2VzU1UiMOZ8XBKDb2UZIEoxID19qLokwVMw9TrsAyqKvNzrkWRvoQHPNZlMB4zI+t1VFSjzadiPC1C/J1JqaV5oL+NYeZShxBs0zgNd3C6/fjaYN4uu6idbWwLQs2npbibNcIdaUT2V3szBVjbdHgmvkfZWAxcnB2Hqs6IpYaw2GYG4qo2mfMZa6n+HCdPTMY3AkgYw+Kw/UXWCPoxptqJdxdV0kyZj07bgwvcecx8f26wxLZUEh5GuuYmr
