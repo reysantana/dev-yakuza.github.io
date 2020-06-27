@@ -1,1 +1,1 @@
-$(document).ready(function(){$("article img").click(function(){$(this).css("cursor","pointer");var c=$(this).attr("src");window.open(c,"_blank")})});
+$(document).ready(function(){$("article img").each(function(t,r){$(r).attr("data-src")&&-1===$(r).attr("data-src").indexOf("download")?($(r).css("cursor","pointer"),$(r).click(function(){var t=$(r).attr("data-src");window.open(t,"_blank")})):$(r).attr("src")&&-1===$(r).attr("src").indexOf("download")&&($(r).css("cursor","pointer"),$(r).click(function(){var t=$(r).attr("src");window.open(t,"_blank")}))})});
