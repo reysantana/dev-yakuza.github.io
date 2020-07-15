@@ -13,5 +13,4 @@ def printLazyLink(file_list):
         os.rename(output_file_name, file_path)
 
 
-printLazyLink(glob.glob("./_site/**/**/*.html"))
-printLazyLink(glob.glob("./_site/**/**/**/*.html"))
+printLazyLink(glob.glob("./_site/**/*.html", recursive=True))
