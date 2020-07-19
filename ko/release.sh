@@ -1,6 +1,6 @@
 # bundle install
 bundle exec jekyll build
-python remove_space_href.py
+python3 remove_space_href.py
 git add .
 git commit -m 'release'
 git push bb develop
